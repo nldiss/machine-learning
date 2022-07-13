@@ -1,6 +1,6 @@
 ---
 title: 'Machine Learning - Learning Lab 1 Independent Practice'
-author: ""
+author: "Nadun Kulasekera Mudiyanselage"
 date: "`r format(Sys.Date(),'%B %e, %Y')`"
 output: html_document
 ---
@@ -25,25 +25,37 @@ Part A:
 
 1.  How good was the machine learning model we developed in the guiding practice? Would you be comfortable using it to code more conversations? What if you read about someone using such a model as a reviewer of research? Please add your thoughts and reflections following the bullet point below.
 
--   
+- 
+The model had close to 87% accuracy so I'm inclined to say that it is a good model and I'm comfortable using it to code more conversations with binary outputs.The confusion matrix also confirmed that teh accuracy is close to 87% which is excellent!
+
 
 2.  How might the model be improved? Share any ideas you have at this time below:
 
--   
+-
+Not at the moment
 
 Part B: Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#articles)), [Google Scholar](https://scholar.google.com/) or search engine to locate a research article, presentation, or resource that applies machine learning to an educational context aligned with your research interests. More specifically, **locate a machine learning study that involve making predictions**.
 
 1.  Provide an APA citation for your selected study.
 
-    -   
+    - 
+Alireza Ahadi, Raymond Lister, Heikki Haapala, and Arto Vihavainen. 2015. Exploring Machine Learning Methods to Automatically Identify Students in Need of Assistance. In Proceedings of the eleventh annual International Conference on International Computing Education Research (ICER '15). Association for Computing Machinery, New York, NY, USA, 121–130. https://doi.org/10.1145/2787622.2787717
 
 2.  What research questions were the authors of this study trying to address and why did they consider these questions important?
 
     -   
+RQ1 How do the methods proposed by Jadud and Watson et al. perform for detecting high and low-performing students?
+
+RQ2 How do standard machine learning techniques perform for detecting high- and low performing students?
+
+Their study could convince folks to use more machine learning to detect/predict high and low performing students reliably and early in a given semester to help them quickly. 
+    
 
 3.  What were the results of these analyses?
 
     -   
+They showed that they can detect high and low performing students within the first week of the class better using machine learning so that instructors can take actions as early as the second week.   
+When analyzing the performance of the methods proposed by Jadud and Watson et al., they observed that the approaches had relatively poor performance on the data used by the authors. When exploring the performance of the machine learning techniques, the within-data set performance was higher than that of the cross-semester performance, which was measured based on the predictive performance during a separate semester. 
 
 ### Part II: Data Product
 
@@ -70,13 +82,13 @@ final_fit$.predictions[[1]] %>%
 
 Please interpret the above confusion matrix using [these guidelines](https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62) in terms of the true positive, true negative, false positive, and false negative rates. After each of the following (i.e., "True positive"), add both the *number* and percentage of observations. For instance, if there were 100 true positives out of a total of 400 data points, please write: 100 (25%).
 
-**True positive**:
+**True positive**: 260 (34%)
 
-**True negative**:
+**True negative**: 402 (53%)
 
-**False positive**:
+**False positive**:60 (8%)
 
-**False negative**:
+**False negative**:37 (5%)
 
 You can read more about interpreting these [here](https://bradleyboehmke.github.io/HOML/process.html#classification-models) in terms of the specificity, sensitivity, precision, and recall, four statistics based on the information in the confusion matrix.
 

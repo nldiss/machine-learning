@@ -1,6 +1,6 @@
 ---
 title: 'Learning Lab 1 Case Study'
-author: ""
+author: "Nadun Kulasekera Mudiyanselage"
 date: "`r format(Sys.Date(),'%B %e, %Y')`"
 output:
   html_document:
@@ -12,7 +12,6 @@ output:
 editor_options:
   markdown:
     wrap: 72
-bibliography: lit/references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -100,14 +99,14 @@ Note its dimensions --- especially how many rows it has. Add a few
 dashes after the chunk with your observations.
 
 ```{r}
-
+glimpse(d)
 ```
 
 *Observations*:
-
+There are 3793 rows (cases) and 5 columns (variables)
 -   
 
-\*What other variables might we include?\*\* This is a great question to
+\*What other variables might we include? number of repeated words in tweets\*\* This is a great question to
 be asking - surely, including just the four variables we have cannot be
 *that* predictive (right?)! Let's use these few, relatively simple
 variables for now, but know that we'll use far more variables when we
@@ -172,7 +171,8 @@ in the larger data. Do that in the chunk below:
 [Your Turn]{style="color: green;"} ⤵
 
 ```{r}
-
+data_train
+d
 ```
 
 ## Step 2: Engineer features and write down the recipe
@@ -274,6 +274,7 @@ Type `final_fit` below; this is the final, fitted model---one that can
 be interpreted further in the next step!
 
 ```{r}
+final_fit
 ```
 
 You may see a message/warning above or when you examine `final_fit`; you
@@ -325,6 +326,7 @@ Let's interpret the above. If the value of `correct` is `TRUE` when the
 predicted and known code are the same, what does the `percent` column
 tell us? Add one or more notes to the dashes below:
 
+The percentage of false and correct, i.e., false here is roughly 13 and true is 87 precent.
 -   
 
 A short-cut to the above is below:
@@ -337,7 +339,7 @@ final_fit %>%
 **Observations**
 
 -   
-
+The percentage of false and correct, i.e., false here is roughly 13 and true is 87 precent - rounded to the third decimal.
 -   
 
 That's it for now; the core parts of machine learning are used in the
